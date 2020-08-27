@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<meta property="og:image" content="assets/img/logo@2x.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1024">
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+		
+		<title>Parallax</title>
+		
+		<!-- Bootstrap core CSS -->
+	
+		
+		<!-- Font Awesome Icons -->
+	
+		<!-- Custom CSS -->
+		
+		<link href="assets/css/customsas.css" rel="stylesheet">
+
+		
+
+		<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+		<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+		
+		
+	</head>
+
+
+	<body class="body">
+		
+			
+				
+					
+					<div class="wraper">
+						<div class="navbar">
+							<div class="nav-toggle">
+								MENU
+							</div>
+
+
+						</div>
+						
+
+					</div>
+					<div class="menu">
+						<div class="nav">
+							<div class="nav-items">
+							<div class="nav-item">
+								<a href="#">HOME</a>
+								<div class="nav-item-wrapper"></div>
+							</div>
+							<div class="nav-item">
+								<a href="#">ABOUT</a>
+								<div class="nav-item-wrapper"></div>
+							</div>
+							<div class="nav-item">
+								<a href="#">WORK</a>
+								<div class="nav-item-wrapper"></div>
+							</div>
+							<div class="nav-item">
+								<a href="#">NEWS</a>
+								<div class="nav-item-wrapper"></div>
+							</div>
+							<div class="nav-item">
+								<a href="#">CONTACT</a>
+								<div class="nav-item-wrapper"></div>
+							</div>
+						</div>
+								
+						</div>
+
+					</div>
+
+
+				
+				
+					
+
+		<script type="text/javascript">
+			 TweenMax.from(".navbar", 2, {
+                left: "-50%",
+                ease: Expo.easeInOut,
+                delay: 0.4,
+            });
+
+            var t1 = new TimelineMax({ paused: true });
+
+            t1.to(".nav", 1.8, {
+                width: "94%",
+                ease: Expo.easeInOut,
+            });
+
+            t1.staggerTo(".nav-item a", 0.6, { top: "0px", ease: Expo.easeInOut }, 0.1, "-=0.8");
+
+			t1.reverse();
+			
+            $(document).on("click", ".nav-toggle", function () {
+                t1.reversed(!t1.reversed());
+            });
+
+            $(document).on("click", ".nav-item a", function () {
+                t1.reversed(!t1.reversed());
+            });
+
+		</script>
+		<script type="text/javascript">
+            // TweenMax.from(".navbar", 2, {
+            //     left: "-20%",
+            //     ease: Expo.easeInOut,
+            //     delay: 0.4,
+            // });
+
+            // var t1 = new TimelineMax({ paused: true });
+
+            // t1.to(".nav", 1.8, {
+            //     width: "94%",
+            //     ease: Expo.easeInOut,
+            // });
+
+            // t1.staggerTo(".nav-item a", 0.6, { top: "0px", ease: Expo.easeInOut }, 0.1, "-=0.8");
+
+            // t1.reverse();
+            // $(document).on("click", ".nav-toggle", function () {
+            //     t1.reversed(!t1.reversed());
+            // });
+
+            // $(document).on("click", ".nav-item a", function () {
+            //     t1.reversed(!t1.reversed());
+            // });
+        </script>
+</body>
+</html>
