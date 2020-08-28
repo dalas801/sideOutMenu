@@ -55,7 +55,7 @@ body{
   position: fixed;
   background-color: #2e1d20;
   height: 100vh;
-  width: 100%;
+  width: 0%;
   left: 6%;
   text-align: center;
   align-items: center;
@@ -70,6 +70,11 @@ body{
   font-size: 6rem;
   position: relative;
   
+}
+.nav-item a{
+  top: 120px;
+  position: relative;
+  // transition: 1s;
 }
 .nav-item:after{
   content: "";
@@ -92,15 +97,18 @@ a{
 }
 .nav-item-wrapper{
   width: 100%;
+  background-color: white;
+  height: 100%;
 }
 .nav-item-wrapper:after{
   content: "";
-  // height: 2px;
-  // width: 0%;
-  // background: white;
-  // top:45%;
-  // position: absolute;
-  // width: 100%;
+  width: 100%;
+  background-color: #2e1d20;
+  height: 100%;
+  position: absolute;
+  /* top: 45%; */
+  margin: 0 auto;
+  left: 0;
 }
 
 

@@ -44,7 +44,7 @@ body {
   position: fixed;
   background-color: #2e1d20;
   height: 100vh;
-  width: 100%;
+  width: 0%;
   left: 6%;
   text-align: center;
   -webkit-box-align: center;
@@ -66,6 +66,11 @@ body {
 .nav-item {
   margin: 20px;
   font-size: 6rem;
+  position: relative;
+}
+
+.nav-item a {
+  top: 120px;
   position: relative;
 }
 
@@ -91,9 +96,18 @@ a {
 
 .nav-item-wrapper {
   width: 100%;
+  background-color: white;
+  height: 100%;
 }
 
 .nav-item-wrapper:after {
   content: "";
+  width: 100%;
+  background-color: #2e1d20;
+  height: 100%;
+  position: absolute;
+  /* top: 45%; */
+  margin: 0 auto;
+  left: 0;
 }
 /*# sourceMappingURL=customsas.css.map */
